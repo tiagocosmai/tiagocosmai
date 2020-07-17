@@ -1,6 +1,6 @@
 export const Utils = {
     date: {
-        getAge = (dateOfBirth) => {
+        getAge : (dateOfBirth) => {
             const date = new Date();
             const year = date.getFullYear();
             const mount = date.getMonth();
@@ -10,7 +10,7 @@ export const Utils = {
             const birthMonth = dateOfBirth.getMonth();
             const birthDay = dateOfBirth.getDate();
 
-            const yars = (mount < birthMonth || mount == birthMonth && day < birthDay) ? year - birthYar : (year - birthYar) - 1;
+            const yars = (mount < birthMonth || (mount === birthMonth && day < birthDay)) ? year - birthYar : (year - birthYar) - 1;
 
             return yars < 0 ? 0 : yars;
         }
@@ -120,7 +120,7 @@ export const cvData = {
             'en': 'Santo André, São Paulo - Brazil',
             'es': 'Santo André, São Paulo - Brasil'
         },
-        cityOfBirth: {
+        addressCity: {
             'pt': 'Santo André, São Paulo - Brasil',
             'en': 'Santo André, São Paulo - Brazil',
             'es': 'Santo André, São Paulo - Brasil'
@@ -144,7 +144,7 @@ export const cvData = {
     contactData:
         [
             {
-                name: { 'pt': 'e-mail', 'en': 'e-mail', 'en': 'e-mail' },
+                name: { 'pt': 'e-mail', 'en': 'e-mail', 'es': 'e-mail' },
                 show: true,
                 value: 'tiagocosmai@gmail.com',
                 icon: 'email-icon',
@@ -152,7 +152,7 @@ export const cvData = {
                 type: 6
             },
             {
-                name: { 'pt': 'Skype', 'en': 'Skype', 'en': 'Skype' },
+                name: { 'pt': 'Skype', 'en': 'Skype', 'es': 'Skype' },
                 show: true,
                 value: 'tiagocosmai@gmail.com',
                 icon: 'skype-icon',
@@ -160,7 +160,7 @@ export const cvData = {
                 type: 3
             },
             {
-                name: { 'pt': 'Celular', 'en': 'Cell phone', 'en': 'Teléfono móvil' },
+                name: { 'pt': 'Celular', 'en': 'Cell phone', 'es': 'Teléfono móvil' },
                 show: true,
                 value: '+55 11 9 6638 8835',
                 icon: 'cellphone-icon',
@@ -226,9 +226,16 @@ export const cvData = {
 
         ]
     ,
-    jobXpData: {
+    jobXpData: [{
+        company : 'OPAH IT.',
+        clients : [{ name : 'CVC corp', startDate : '2018-08-16', endDate : null,
+            mainFunction : {},
+            jobs : {},
+            destacProjects:{}
+        }]
 
-    },
+
+    }],
     courseData: {
 
     },
