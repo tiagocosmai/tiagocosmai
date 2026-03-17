@@ -158,7 +158,7 @@ https://www.credly.com/users/tiago-cosmai/badges
 
 <p align="center">
 
-<img height="160em" src="https://github-readme-streak-stats.herokuapp.com/?user=tiagocosma&theme=tokyonight"/>
+<img height="160em" src="https://github-readme-streak-stats.herokuapp.com/?user=tiagocosmai&theme=tokyonight"/>
 
 </p>
 
