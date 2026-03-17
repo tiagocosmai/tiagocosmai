@@ -36,19 +36,25 @@ Tenho experiência com **sistemas distribuídos, e-commerce, precificação, pag
 ### Backend
 
 <p>
-<img src="https://skillicons.dev/icons?i=nodejs,ts,js,c#,asp.net,.net,spring-boot,python"/>
+<img src="https://skillicons.dev/icons?i=cs,express,graphql,java,kafka,maven,nestjs,nodejs,py,rabbitmq,spring"/>
 </p>
 
 ### Frontend
 
 <p>
-<img src="https://skillicons.dev/icons?i=react,nextjs,css,html"/>
+<img src="https://skillicons.dev/icons?i=react,redux,html,css,bootstrap,js,ts,jest,jquery,md,materialui,nextjs,sass,tailwind,wordpress"/>
 </p>
 
 ### Infrastructure
 
 <p>
-<img src="https://skillicons.dev/icons?i=docker,kubernetes,aws,oci"/>
+<img src="https://skillicons.dev/icons?i=aws,bash,bitbucket,docker,git,github,gitlab,githubactions,grafana,jenkins,kubernetes,linux,npm"/>
+</p>
+
+### Database
+
+<p>
+<img src="https://skillicons.dev/icons?i=elasticsearch,mongodb,mysql,postgres,redis,sqlite,supabase"/>
 </p>
 
 ---
