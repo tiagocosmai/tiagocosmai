@@ -150,11 +150,15 @@ https://www.credly.com/users/tiago-cosmai/badges
 
 </p>
 
+---
+
 <p align="center">
 
 <img height="160em" src="https://github-readme-stats.vercel.app/api?username=tiagocosmai&show_icons=true&locale=en&theme=tokyonight"/>
 
 </p>
+
+---
 
 <p align="center">
 
