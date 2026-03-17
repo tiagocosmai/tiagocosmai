@@ -152,19 +152,19 @@ https://www.credly.com/users/tiago-cosmai/badges
 
 <p align="center">
 
-<img width="100%" src="https://github-readme-stats.vercel.app/api/top-langs?username=tiagocosmai&show_icons=true&locale=en&theme=tokyonight" alt="tiagocosmai" />
+<img height="160em" width="100%" src="https://github-readme-stats.vercel.app/api/top-langs?username=tiagocosmai&show_icons=true&locale=en&theme=tokyonight" alt="tiagocosmai" />
 
 </p>
 
 <p align="center">
 
-<img width="100%" src="https://github-readme-stats.vercel.app/api?username=tiagocosmai&show_icons=true&locale=en&theme=tokyonight"/>
+<img height="160em" width="100%" src="https://github-readme-stats.vercel.app/api?username=tiagocosmai&show_icons=true&locale=en&theme=tokyonight"/>
 
 </p>
 
 <p align="center">
 
-<img width="100%" src="https://github-readme-streak-stats.herokuapp.com/?user=tiagocosmai&theme=tokyonight"/>
+<img height="160em" width="100%" src="https://github-readme-streak-stats.herokuapp.com/?user=tiagocosmai&theme=tokyonight"/>
 
 </p>
 
