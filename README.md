@@ -183,6 +183,7 @@ https://www.credly.com/users/tiago-cosmai/badges
 <p align="center">
 <img src="https://komarev.com/ghpvc/?username=tiagocosmai&color=blue"/>
 <img src="https://img.shields.io/github/last-commit/tiagocosmai/tiagocosmai"/>
+<img alt="GitHub followers" src="https://img.shields.io/github/followers/tiagocosmai">
 </p>
 
 ---
