@@ -146,7 +146,7 @@ https://www.credly.com/users/tiago-cosmai/badges
 
 <p align="center">
 
-<img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=tiagocosmai&show_icons=true&locale=en&layout=compact&theme=tokyonight" alt="tiagocosmai" />
+<img height="160em" src="https://github-readme-stats.vercel.app/api/top-langs?username=tiagocosmai&show_icons=true&locale=en&layout=compact&theme=tokyonight" alt="tiagocosmai" />
 
 </p>
 
