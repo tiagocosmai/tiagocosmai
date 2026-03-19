@@ -37,6 +37,12 @@ Se o build falhar ou o HTML não for o de produção, o deploy **para com erro**
 
 Se fizer **push** para `main` (ou `master`), o workflow **Deploy GitHub Pages** (`.github/workflows/deploy-pages.yml`) faz `npm ci`, `npm run build:gh`, valida `dist/` e publica na branch **gh-pages** com o token do repositório. Não precisa de `npm run deploy` em local se usar só o CI.
 
+#### `npm ci` com E401 no GitHub Actions
+
+O erro **E401** no CI costuma vir do **`package-lock.json`** com URLs `resolved` para um registry **privado** (ex.: JFrog), não do `.npmrc` em si. O runner do GitHub não tem as tuas credenciais.
+
+Neste projeto o `.npmrc` no repositório fixa **`registry=https://registry.npmjs.org/`** e o lockfile foi gerado a partir do registry público, para `npm ci` funcionar em qualquer lado. **Retirar o `.npmrc` do git** não resolveria se o lockfile continuasse a apontar para o Artifactory — era preciso regenerar o lock com o npm público (como já está feito).
+
 ### 3. URL do site
 
 Com o repositório **tiagocosmai**, o site fica em:
