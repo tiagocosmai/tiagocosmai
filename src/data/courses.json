@@ -1,0 +1,410 @@
+{
+  "distance": [
+    {
+      "provider": "CVC Corp",
+      "url": "",
+      "items": [
+        {
+          "pt": "Treinamento Lei Geral de Proteção de Dados CVC Corp – 2020 – 1 Hora"
+        },
+        {
+          "pt": "Comunicação Empatica – 2020 – 1 Hora"
+        }
+      ]
+    },
+    {
+      "provider": "Fundação Bradesco",
+      "url": "http://www.escolavirtual.org.br",
+      "items": [
+        {
+          "pt": "HTML Básico – 2010 – 23 Horas"
+        },
+        {
+          "pt": "HTML Avançado – 2010 – 64 Horas"
+        },
+        {
+          "pt": "Modelagem de Dados – 2010 – 35 Horas"
+        },
+        {
+          "pt": "Administração e Planejamento de Finanças – 2010 – 22 Horas"
+        },
+        {
+          "pt": "Sistemas Operacionais – Conceitos Básicos – 2018 – 5 Horas"
+        },
+        {
+          "pt": "HTML e CSS na prática – 2018 – 24 Horas"
+        },
+        {
+          "pt": "Introdução ao Javascript – 2018 – 20 Horas"
+        },
+        {
+          "pt": "Administração no Século 21 (Trilha de Conhecimento) 2018/2019 – 42 Horas"
+        },
+        {
+          "pt": "Introdução à administração – 2019 – 12 Horas"
+        },
+        {
+          "pt": "Introdução à gestão de projetos – 2019 – 10 Horas"
+        },
+        {
+          "pt": "Empreendedorismo e Inovação – 2018 – 12 Horas"
+        },
+        {
+          "pt": "Responsabilidade Social e Sustentabilidade – 2019 – 8 Horas"
+        }
+      ]
+    },
+    {
+      "provider": "SENAI SP",
+      "url": "https://portalead.sp.senai.br/ · https://ead.sp.senai.br/",
+      "items": [
+        {
+          "pt": "Lógica de Programação – 2018 – 14 Horas"
+        },
+        {
+          "pt": "Desvendando a Blockchain – 2018 – 20 Horas"
+        },
+        {
+          "pt": "Desvendando a Industria 4.0 – 2018 – 20 Horas"
+        },
+        {
+          "pt": "Finanças Pessoais – 2018 – 14 Horas"
+        },
+        {
+          "pt": "Tecnologia da Informação e Comunicação – 2018 – 14 Horas"
+        },
+        {
+          "pt": "Propriedade Intelectual – 2018 – 14 Horas"
+        },
+        {
+          "pt": "Empreendedorismo – 2019 – 14 Horas"
+        },
+        {
+          "pt": "Consumo Consciente de Energia – 2019 – 14 Horas"
+        },
+        {
+          "pt": "Educação Ambiental – 2019 – 14 Horas"
+        },
+        {
+          "pt": "Fundamentos de Logística – 2019 – 14 Horas"
+        },
+        {
+          "pt": "Segurança no Trabalho – 2019 – 14 Horas"
+        }
+      ]
+    },
+    {
+      "provider": "SENAI ES",
+      "url": "https://eadsenaies.com.br/",
+      "items": [
+        {
+          "pt": "Legislação Trabalhista – 2019 – 14 Horas"
+        }
+      ]
+    },
+    {
+      "provider": "SESI PR",
+      "url": "http://www.eadsesipr.org.br",
+      "items": [
+        {
+          "pt": "Boas Práticas e Competências do SCRUM MASTER – 2018 – 4 Horas"
+        }
+      ]
+    },
+    {
+      "provider": "CATHO",
+      "url": "http://www.catho.com.br",
+      "items": [
+        {
+          "pt": "Gestão de Tecnologia de Informação – 2006 – 16 Horas"
+        },
+        {
+          "pt": "Matemática Financeira – 2006 – 16 Horas"
+        }
+      ]
+    },
+    {
+      "provider": "FGV",
+      "url": "http://www5.fgv.br/fgvonline/",
+      "items": [
+        {
+          "pt": "BSC: Introdução à criação e execução da estratégia – 2018 – 5 Horas"
+        },
+        {
+          "pt": "Definições e objetivos da gestão de projetos – 2019 – 5 Horas"
+        },
+        {
+          "pt": "Fundamentos da Gestão de TI – 2019 – 5 Horas"
+        }
+      ]
+    },
+    {
+      "provider": "UDEMY",
+      "url": "https://www.udemy.com",
+      "items": [
+        {
+          "pt": "Aprenda Markdown (Instrutor: Roberto Achar) – 2019 – 1 Hora"
+        },
+        {
+          "pt": "Inteligência Emocional no Trabalho (Instrutor: Marco Enes) – 2019 – 1,5 Horas"
+        },
+        {
+          "pt": "Introdução à linguagem HTML (Instrutor: Diego Mariano) – 2019 – 1 Hora"
+        },
+        {
+          "pt": "Introdução à linguagem CSS (Instrutor: Diego Mariano) – 2019 – 1 Hora"
+        },
+        {
+          "pt": "Introdução à linguagem Javascript (Instrutor: Diego Mariano) – 2019 – 1 Hora"
+        },
+        {
+          "pt": "Introdução ao jQuery (Instrutor: Diego Mariano) – 2019 – 1 Hora"
+        },
+        {
+          "pt": "Terminal Linux (Instrutor: Diego Mariano) – 2019 – 1 Hora"
+        },
+        {
+          "pt": "Introdução ao Sistema Operacional Linux (Instrutor: Diego Mariano) – 2019 – 2 Horas"
+        },
+        {
+          "pt": "Criando páginas web com o GitHub Pages (Instrutor: Marcos Castro) – 2019 – 1 Hora"
+        },
+        {
+          "pt": "Produtividade máxima com VS Code (Instrutor: Diego Martins de Pinho) – 2019 – 1 Hora"
+        },
+        {
+          "pt": "ReactJS – Aprendendo Rápido (Instrutor: Henrique Weiand) – 2019 – 1,5 Horas"
+        },
+        {
+          "pt": "Curso React.js Ninja: Módulo React + Webpack (Instrutor: Fernando Daciuk) – 2019 – 1,5 Horas"
+        },
+        {
+          "pt": "JavaScript & MySql (Instrutor Diego Mariano) – 2020 – 5 Horas"
+        },
+        {
+          "pt": "Git e Git Hub para iniciantes (Willian Justen de Vasconcellos) – 2020 – 2 Horas"
+        },
+        {
+          "pt": "Introdução à Criação de sites dinâmicos com PHP (Instrutor Diego Mariano) – 2020 – 1,5 Horas"
+        },
+        {
+          "pt": "Introdução à programação de computadores – Python (Instrutor Diego Mariano) – 2020 – 2,5 Horas"
+        },
+        {
+          "pt": "Introdução a banco de dados com MySQL & PHPMyAdmin (Instrutor Diego Mariano) – 2020 – 1 Hora"
+        },
+        {
+          "pt": "Banco de Dados MySql (Instrutor Diego Mariano) – 2020 – 4,5 Horas"
+        },
+        {
+          "pt": "Introdução à linguagem Python (Instrutor Diego Mariano) – 2020 – 2,5 Horas"
+        },
+        {
+          "pt": "Boas Práticas em PHP (Instrutor Diego Mariano) – 2020 – 1 Hora"
+        },
+        {
+          "pt": "Introdução ao PHP Orientado a Objetos (Instrutor Diego Mariano) – 2020 – 1 Hora"
+        },
+        {
+          "pt": "BLAST: Ferramenta de Alinhamentos Locais de Sequências (Instrutor Diego Mariano) – 2020 – 2 Horas"
+        },
+        {
+          "pt": "GIMP: o editor de imagens gratuito para Windows Linux e Mac (Instrutor Diego Mariano) – 2020 – 2 Horas"
+        },
+        {
+          "pt": "Minicurso Qlikview do Zero – Introdução ao Qlik! (Instrutor André Prado) – 2020 – 2 Horas"
+        },
+        {
+          "pt": "Python & MySql (Instrutor Diego Mariano) – 2020 – 6,5 Horas"
+        },
+        {
+          "pt": "Web Design: Construa Sites com PHP, HTML, CSS e JavaScript (Instrutor Diego Mariano) – 2020 – 10 Horas"
+        },
+        {
+          "pt": "Data Science: Visualização de dados com Python (Instrutor Diego Mariano) – 2020 – 1 Hora"
+        },
+        {
+          "pt": "Criando sites estáticos com Jekyll (Instrutor Willian Justen de Vasconcellos) – 2020 – 2 Horas"
+        },
+        {
+          "pt": "Bootstrap 4: Completo e Direto ao Ponto + 7 Projetos (Instrutor Diego Mariano) – 2020 – 8 Horas"
+        },
+        {
+          "pt": "Criando um ambiente de Desenvolvimento no Windows (Instrutor Willian Justen de Vasconcellos) – 2020 – 1,5 Horas"
+        },
+        {
+          "pt": "Git e contribuições para projetos Open Source (Instrutor Bruno Orlandi) – 2020 – 3,5 Horas"
+        },
+        {
+          "pt": "React, Redux e integração de APIs (Instrutor Nataniel Paiva) – 2020 – 1,5 Horas"
+        },
+        {
+          "pt": "Adobe XD: Design de Interfaces para Criação de Sites (Instrutor Diego Mariano) – 2020 – 2 Horas"
+        },
+        {
+          "pt": "Positividade e Inteligência Emocional (Instrutor Marcos Meda) – 2023 – 2 Horas"
+        }
+      ]
+    },
+    {
+      "provider": "Microsoft Virtual Academy",
+      "url": "https://mva.microsoft.com/",
+      "items": [
+        {
+          "pt": "Conceitos básicos de C# para iniciantes – 2019 – 8 Horas"
+        },
+        {
+          "pt": "Fundamentos do C# com Clean Code – 2019 – 3 Horas"
+        },
+        {
+          "pt": "HTML5 – Homologado pelo W3C – 2019 – 1 Hora"
+        },
+        {
+          "pt": "ASP.NET MVC 5 Conceitos Básicos – 2019 – 3 Horas"
+        },
+        {
+          "pt": "ASP.NET MVC Intermediário – 2019 – 3 Horas"
+        },
+        {
+          "pt": "Introdução ao JSON com C# – 2019 – 1 Hora"
+        },
+        {
+          "pt": "Introdução ao ASP.NET Core 1.0 – 2019 – 1 Hora"
+        },
+        {
+          "pt": "Introdução ao NodeJS com Typescript no Visual Studio Code – 2019 – 1 Hora"
+        },
+        {
+          "pt": "ASP.Net Core 2.0 (Trilha de Conhecimento) – 2019 – 8 Horas"
+        },
+        {
+          "pt": "ASP.NET Core – Beginner – 2,5 Horas"
+        },
+        {
+          "pt": "ASP.NET Core – Intermediate – 3,5 Horas"
+        },
+        {
+          "pt": "ASP.NET Core – Advanced – 2 Horas"
+        },
+        {
+          "pt": "MEAN Stack Development (Trilha de Conhecimento) – 2019 – 16 Horas"
+        },
+        {
+          "pt": "MEAN Stack Jump Start – 4 Horas"
+        },
+        {
+          "pt": "Using Node.js with Visual Studio Code – 5 Horas"
+        },
+        {
+          "pt": "Introduction to Angular 2.0 – 2 Horas"
+        },
+        {
+          "pt": "MongoDB and Redis Caching – 5 Horas"
+        },
+        {
+          "pt": "DevOps for Developers (Trilha de Conhecimento) – 2019 – 6 Horas"
+        },
+        {
+          "pt": "Enabling DevOps Practices with Visual Studio Team Services Build – 2 Horas"
+        },
+        {
+          "pt": "Open Source for DevOps Practices – 4 Horas"
+        }
+      ]
+    },
+    {
+      "provider": "Azure na prática",
+      "url": "https://app.nutror.com/v3/vitrine/",
+      "items": [
+        {
+          "pt": "Master Class GitHub Actions – 4 Horas"
+        }
+      ]
+    },
+    {
+      "provider": "Aliança Brasileira pela Educação",
+      "url": "https://aliancapelaeducacao.com.br",
+      "items": [
+        {
+          "pt": "Conceitos Ageis: SCRUM – 2023 – 4 Horas"
+        }
+      ]
+    }
+  ],
+  "presential": [
+    {
+      "pt": "Scrum + XP = Agilidade eXtrema – Global Code – 2009 – 3 Horas"
+    },
+    {
+      "pt": "Treinamento em SCRUM com Fábio Câmara, pela empresa Thomas Greg & Sons – 2010 – 5 Horas"
+    }
+  ],
+  "events": [
+    {
+      "pt": "II Workshop de Tecnologia da Fatec Mauá – 2004"
+    },
+    {
+      "pt": "I Semana da Tecnologia Fatec – Mauá – 2004"
+    },
+    {
+      "pt": "III Workshop de Tecnologia da Fatec Mauá – 2005"
+    },
+    {
+      "pt": "II Semana de Tecnologia da Faculdade de Tecnologia Termomecanica – 2006"
+    },
+    {
+      "pt": "III Semana de Tecnologia da Faculdade de Tecnologia Termomecanica – 2007"
+    },
+    {
+      "pt": "IV Semana de Tecnologia da Faculdade de Tecnologia Termomecanica – 2008"
+    },
+    {
+      "pt": "CARDS PAYMENT & IDENTIFICATION – Expositor Thomas Greg & Sons – 2009"
+    },
+    {
+      "pt": "CARDS PAYMENT & IDENTIFICATION – Expositor Thomas Greg & Sons – 2010"
+    },
+    {
+      "pt": "Acessibilidade na Web, por Reinaldo Ferraz – Front In Sampa – W3C Brasil – 2013"
+    },
+    {
+      "pt": "Learning & Performance Brasil – 2014"
+    },
+    {
+      "pt": "Bluetalk: CI/CD numa esteira DevOps Open, Escalável, em ‘casa’ com IBM Cloud Private – IBM – 2019"
+    },
+    {
+      "pt": "Meetup: Adicionando um paradigma funcional em sua caixa de ferramentas com Clojure (Guilherme Pupolin e Kaue Schultz) – PayGo/CVC Corp – 2019"
+    },
+    {
+      "pt": "Meetup: Javascript: Programação Funcional e ECMAScript 6 (Denis Castanheira) – CVC Corp – 2019"
+    },
+    {
+      "pt": "Meetup: Arquitetura Clean Code (Sérgio Costa) – Opah IT – 2020"
+    },
+    {
+      "pt": "Meetup: Clean Architecture (Vinícius Temóteo Ferrari) – CVC Corp – 2020"
+    },
+    {
+      "pt": "Palestra: Evolução Profissional e Pessoal (Paulo Silveira) – Opah IT/Alura – 2020"
+    },
+    {
+      "pt": "Webinar: DevOps: Docker e Kubernetes – CVC Corp – 2020"
+    },
+    {
+      "pt": "Webinar: DevOps: Quality gates no SonarQube – CVC Corp – 2020"
+    },
+    {
+      "pt": "Webinar: DevOps: Pipeline e RFC – CVC Corp – 2020"
+    },
+    {
+      "pt": "Webinar: DevOps: Vault e Consul – CVC Corp – 2020"
+    },
+    {
+      "pt": "Webinar DevOps: Jenkins Jobs e AppStructure – CVC Corp – 2020"
+    },
+    {
+      "pt": "Meetup – React (André Ricardo Pontes da Silva) – CVC Corp – 2020"
+    }
+  ]
+}
