@@ -6,14 +6,6 @@ import { defineConfig } from "vitest/config";
 export default defineConfig({
   plugins: [react()],
   base: process.env.GH_PAGES === "true" ? "/react-portfolio-template/" : "/",
-  server: {
-    proxy: {
-      "/api/contact": {
-        target: "http://127.0.0.1:8787",
-        changeOrigin: true,
-      },
-    },
-  },
   test: {
     environment: "jsdom",
     globals: true,

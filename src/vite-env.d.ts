@@ -6,7 +6,7 @@ declare module "*.txt?raw" {
 }
 
 interface ImportMetaEnv {
-  readonly VITE_CONTACT_API_URL?: string;
+  // add Vite env vars here
 }
 
 interface ImportMeta {
