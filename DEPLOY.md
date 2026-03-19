@@ -1,23 +1,34 @@
-# Deploy no GitHub Pages
+# Deploy no GitHub Pages — **https://tiagocosmai.github.io** (raiz)
 
-## Por que dá 404 em `main.tsx`?
+O site público fica na **raiz** do domínio: `https://tiagocosmai.github.io`.  
+Para isso o GitHub exige um repositório com o nome exato **`tiagocosmai.github.io`**.
 
-O erro **"Failed to load resource: main.tsx 404"** aparece quando o GitHub Pages está a servir o **código-fonte** (branch `main`) em vez do **site buildado** (branch `gh-pages`). O `index.html` do projeto referencia `/src/main.tsx`; esse ficheiro só existe em desenvolvimento. O build gera um `index.html` que referencia `/tiagocosmai/assets/...` (ficheiros que existem na pasta `dist`).
+O código-fonte pode continuar no repositório **`tiagocosmai`**; o build (`dist/`) é publicado no **`tiagocosmai.github.io`**.
 
-## Passos obrigatórios
+---
 
-### 1. Configurar o GitHub Pages no repositório
+## 1. Criar o repositório do site
 
-No repositório **tiagocosmai** no GitHub:
+No GitHub, cria um repositório com o nome **exato**:
+
+`tiagocosmai.github.io`
+
+(pode estar vazio; o deploy vai preencher a branch `gh-pages`.)
+
+---
+
+## 2. Configurar GitHub Pages nesse repositório
+
+No repositório **tiagocosmai.github.io** (não no `tiagocosmai`):
 
 1. **Settings** → **Pages**
-2. Em **Source**: escolher **Deploy from a branch**
-3. **Branch**: selecionar **gh-pages** e pasta **/ (root)**
+2. **Source**: *Deploy from a branch*
+3. **Branch**: **gh-pages** → pasta **/ (root)**
 4. Guardar
 
-Assim o site passa a ser o conteúdo da branch **gh-pages** (o build), e não o da `main`.
+---
 
-### 2. Fazer o deploy a partir do projeto
+## 3. Deploy a partir do teu PC
 
 Na pasta do projeto:
 
@@ -25,52 +36,44 @@ Na pasta do projeto:
 npm run deploy
 ```
 
-O script `scripts/deploy-gh-pages.mjs`:
+Isto corre `npm run build` (Vite com `base: "/"`), valida `dist/` e publica na branch **gh-pages** de **tiagocosmai.github.io**.
 
-1. Executa **`npm run build:gh`** (Vite gera `dist/` com `base: /tiagocosmai/`).
-2. **Valida** que `dist/index.html` não contém `main.tsx` e que referencia `assets/` (build de produção).
-3. Só então publica com **gh-pages** na branch `gh-pages`.
+Na primeira vez, o GitHub pode pedir autenticação para o `gh-pages` fazer push nesse repo.
 
-Se o build falhar ou o HTML não for o de produção, o deploy **para com erro** em vez de publicar ficheiros errados.
+---
 
-### 2b. Deploy automático (GitHub Actions)
+## 4. Deploy automático (GitHub Actions) a partir do repo `tiagocosmai`
 
-Se fizer **push** para `main` (ou `master`), o workflow **Deploy GitHub Pages** (`.github/workflows/deploy-pages.yml`) faz `npm ci`, `npm run build:gh`, valida `dist/` e publica na branch **gh-pages** com o token do repositório. Não precisa de `npm run deploy` em local se usar só o CI.
+O workflow faz push do `dist/` para **outro** repositório (`tiagocosmai.github.io`). O `GITHUB_TOKEN` do workflow **não** tem permissão para isso por defeito.
 
-#### `npm ci` com E401 no GitHub Actions
+1. Cria um **Personal Access Token (classic)** em GitHub → Settings → Developer settings → Personal access tokens, com scope **`repo`** (acesso ao `tiagocosmai.github.io`).
+2. No repositório onde está o **código** (ex.: **tiagocosmai**): **Settings** → **Secrets and variables** → **Actions** → **New repository secret**
+   - Nome: **`GH_PAGES_TOKEN`**
+   - Valor: o token gerado
 
-O erro **E401** no CI costuma vir do **`package-lock.json`** com URLs `resolved` para um registry **privado** (ex.: JFrog), não do `.npmrc` em si. O runner do GitHub não tem as tuas credenciais.
+Depois, cada **push** para `main` ou `master` corre o workflow e atualiza o site.
 
-Neste projeto o `.npmrc` no repositório fixa **`registry=https://registry.npmjs.org/`** e o lockfile foi gerado a partir do registry público, para `npm ci` funcionar em qualquer lado. **Retirar o `.npmrc` do git** não resolveria se o lockfile continuasse a apontar para o Artifactory — era preciso regenerar o lock com o npm público (como já está feito).
+---
 
-### 3. URL do site
+## Por que dá 404 em `main.tsx`?
 
-Com o repositório **tiagocosmai**, o site fica em:
+Isso acontece quando o Pages está a servir o **código-fonte** (ex.: branch `main` com o `index.html` de desenvolvimento) em vez do **build** em **gh-pages**. O `index.html` de dev aponta para `/src/main.tsx`; o build aponta para `/assets/...`.
 
-**https://tiagocosmai.github.io/tiagocosmai/**
+---
+
+## `npm ci` com E401 no CI
+
+O **`package-lock.json`** deve usar URLs `https://registry.npmjs.org/...` (registry público). Lockfiles gerados atrás de um registry privado (ex.: JFrog) falham no GitHub sem credenciais. O `.npmrc` do projeto fixa o registry público.
 
 ---
 
 ## Testar o build em local
 
-Para testar o site como fica depois do build, sem publicar:
-
 ```bash
-npm run deploy   # ou: npm run build:gh
-npm run preview  # abre o site em http://localhost:4173
+npm run build
+npm run preview
 ```
 
-Não abras o `index.html` diretamente no browser (ficheiro ou servidor que sirva a raiz do projeto); isso usa o `index.html` de desenvolvimento e dá 404 em `main.tsx`.
+Abre `http://localhost:4173` — deve coincidir com o que vai para produção.
 
----
-
-## Site na raiz (https://tiagocosmai.github.io)
-
-Para o site ficar em **https://tiagocosmai.github.io** (sem `/tiagocosmai/`):
-
-1. Criar um repositório no GitHub com o nome exato **tiagocosmai.github.io**
-2. No projeto: `npm run build` (sem `GH_PAGES`) e publicar a pasta `dist` nesse repositório, por exemplo:
-   ```bash
-   npm run build && gh-pages -d dist -r https://github.com/tiagocosmai/tiagocosmai.github.io.git
-   ```
-3. No repositório **tiagocosmai.github.io** → Settings → Pages → Source: branch **gh-pages**
+Não abras o `index.html` do projeto diretamente no browser sem o Vite; isso usa o HTML de desenvolvimento.
