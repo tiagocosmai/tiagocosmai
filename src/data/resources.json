@@ -94,7 +94,7 @@
   "contact_sending": { "pt": "Enviando…", "en": "Sending…", "es": "Enviando…" },
   "contact_success": { "pt": "Mensagem enviada. Obrigado — retorno em breve.", "en": "Message sent. Thank you — I'll get back to you soon.", "es": "Mensaje enviado. Gracias — responderé pronto." },
   "contact_error_generic": { "pt": "Não foi possível enviar. Tente novamente.", "en": "Could not send. Please try again.", "es": "No se pudo enviar. Inténtelo de nuevo." },
-  "contact_error_network": { "pt": "Erro de rede. Em local, use npm run dev:all com a API ativa.", "en": "Network error. If local, run npm run dev:all with the API running.", "es": "Error de red. En local, ejecute npm run dev:all con la API activa." },
+  "contact_opens_mail": { "pt": "Seu cliente de e-mail será aberto com a mensagem preenchida.", "en": "Your email client will open with the message filled in.", "es": "Se abrirá su cliente de correo con el mensaje rellenado." },
   "required_marker": { "pt": "obrigatório", "en": "required", "es": "obligatorio" },
   "courses_page_title": { "pt": "Cursos, eventos e treinamentos", "en": "Courses, events & training", "es": "Cursos, eventos y formación" },
   "courses_section_distance": { "pt": "Cursos e treinamentos a distância", "en": "Online courses & training", "es": "Cursos y formación a distancia" },

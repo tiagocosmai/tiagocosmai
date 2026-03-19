@@ -6,10 +6,7 @@ import { useLocale } from "../context/LocaleContext";
 import { sectionHeadingClass } from "../lib/sectionHeading";
 import { SectionTitleIcon } from "../lib/sectionIcons";
 
-const contactEndpoint =
-  import.meta.env.VITE_CONTACT_API_URL?.trim() || "/api/contact";
-
-type SendState = "idle" | "sending" | "success" | "error";
+type SendState = "idle" | "success" | "error";
 
 export default function Contact() {
   const mode = useThemeMode();
@@ -37,7 +34,7 @@ export default function Contact() {
       : "border-black/15 bg-white text-[#0d1116] placeholder:text-neutral-500 focus:ring-[#166534]"
   }`;
 
-  const sendEmail = async (e: FormEvent) => {
+  const sendEmail = (e: FormEvent) => {
     e.preventDefault();
     setSendError(null);
     setSendState("idle");
@@ -50,29 +47,17 @@ export default function Contact() {
     setMessageError(msg === "");
     if (!n || !em || !msg) return;
 
-    setSendState("sending");
-    try {
-      const res = await fetch(contactEndpoint, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name: n, email: em, message: msg }),
-      });
-      const data = (await res.json().catch(() => ({}))) as {
-        error?: string;
-      };
-      if (!res.ok) {
-        setSendState("error");
-        setSendError(data.error ?? t("contact_error_generic"));
-        return;
-      }
-      setSendState("success");
-      setName("");
-      setEmail("");
-      setMessage("");
-    } catch {
-      setSendState("error");
-      setSendError(t("contact_error_network"));
-    }
+    const to = c.main.social.email;
+    const subject = encodeURIComponent(`Contact from portfolio: ${n}`);
+    const body = encodeURIComponent(
+      `Name: ${n}\nEmail: ${em}\n\nMessage:\n${msg}`,
+    );
+    const mailto = `mailto:${to}?subject=${subject}&body=${body}`;
+    window.location.href = mailto;
+    setSendState("success");
+    setName("");
+    setEmail("");
+    setMessage("");
   };
 
   const heading = isDark ? "text-white" : "text-[#0d1116]";
@@ -106,7 +91,7 @@ export default function Contact() {
               className="mb-4 rounded-lg border border-emerald-500/40 bg-emerald-500/10 px-4 py-3 text-emerald-300"
               role="status"
             >
-              {t("contact_success")}
+              {t("contact_opens_mail")}
             </p>
           ) : null}
           {sendState === "error" && sendError ? (
@@ -138,7 +123,6 @@ export default function Contact() {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   className={inputCls}
-                  disabled={sendState === "sending"}
                   aria-invalid={nameError}
                   aria-describedby={nameError ? "name-err" : undefined}
                 />
@@ -160,7 +144,6 @@ export default function Contact() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className={inputCls}
-                  disabled={sendState === "sending"}
                   aria-invalid={emailError}
                   aria-describedby={emailError ? "email-err" : undefined}
                 />
@@ -183,7 +166,6 @@ export default function Contact() {
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 className={inputCls}
-                disabled={sendState === "sending"}
                 aria-invalid={messageError}
                 aria-describedby={messageError ? "msg-err" : undefined}
               />
@@ -194,20 +176,17 @@ export default function Contact() {
               ) : null}
             </div>
             <p className={`mb-3 text-sm ${muted}`}>
-              {sendState === "idle" || sendState === "sending"
-                ? t("contact_secure_note")
-                : null}
+              {sendState === "idle" ? t("contact_secure_note") : null}
             </p>
             <button
               type="submit"
-              disabled={sendState === "sending"}
               className={`float-right inline-flex items-center gap-2 rounded-lg px-6 py-3 font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-60 ${
                 isDark
                   ? "border border-[#00FF41]/50 bg-[#00FF41]/10 text-[#00FF41] hover:bg-[#00FF41] hover:text-[#030806]"
                   : "bg-emerald-900 text-white hover:bg-[#00FF41] hover:text-[#030806]"
               }`}
             >
-              {sendState === "sending" ? t("contact_sending") : t("contact_send")}
+              {t("contact_send")}
               <FontAwesomeIcon icon={faPaperPlane} className="text-sm" />
             </button>
           </form>
