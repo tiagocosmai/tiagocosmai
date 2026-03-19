@@ -77,3 +77,5 @@ npm run preview
 Abre `http://localhost:4173` — deve coincidir com o que vai para produção.
 
 Não abras o `index.html` do projeto diretamente no browser sem o Vite; isso usa o HTML de desenvolvimento.
+
+---
