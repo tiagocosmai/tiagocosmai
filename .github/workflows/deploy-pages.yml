@@ -1,0 +1,43 @@
+# Gera o site estático e publica na branch gh-pages (sem depender do gh-pages local).
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches: [main, master]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Build static (base /tiagocosmai/)
+        run: npm run build:gh
+
+      - name: Verify production HTML
+        run: |
+          test -f dist/index.html
+          ! grep -q 'main.tsx' dist/index.html || (echo 'dist must not reference main.tsx' && exit 1)
+          grep -q 'assets/' dist/index.html || (echo 'dist must reference bundled assets' && exit 1)
+
+      - name: Deploy to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          force_orphan: true

@@ -13,8 +13,7 @@
     "sync:courses": "node scripts/sync-courses-from-txt.mjs",
     "test": "vitest run",
     "test:watch": "vitest",
-    "predeploy": "npm run build:gh",
-    "deploy": "npm run predeploy && gh-pages -d dist -r https://github.com/tiagocosmai/tiagocosmai.git"
+    "deploy": "node scripts/deploy-gh-pages.mjs"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",

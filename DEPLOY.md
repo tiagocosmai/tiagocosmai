@@ -25,7 +25,17 @@ Na pasta do projeto:
 npm run deploy
 ```
 
-Isto faz o build com o base correto (`/tiagocosmai/`) e envia o conteúdo da pasta `dist` para a branch `gh-pages` do repositório **tiagocosmai**.
+O script `scripts/deploy-gh-pages.mjs`:
+
+1. Executa **`npm run build:gh`** (Vite gera `dist/` com `base: /tiagocosmai/`).
+2. **Valida** que `dist/index.html` não contém `main.tsx` e que referencia `assets/` (build de produção).
+3. Só então publica com **gh-pages** na branch `gh-pages`.
+
+Se o build falhar ou o HTML não for o de produção, o deploy **para com erro** em vez de publicar ficheiros errados.
+
+### 2b. Deploy automático (GitHub Actions)
+
+Se fizer **push** para `main` (ou `master`), o workflow **Deploy GitHub Pages** (`.github/workflows/deploy-pages.yml`) faz `npm ci`, `npm run build:gh`, valida `dist/` e publica na branch **gh-pages** com o token do repositório. Não precisa de `npm run deploy` em local se usar só o CI.
 
 ### 3. URL do site
 
