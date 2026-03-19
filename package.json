@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "homepage": "https://yujisatojr.github.io/react-portfolio-template",
+  "homepage": "https://tiagocosmai.github.io",
   "scripts": {
     "dev": "vite",
     "dev:all": "vite",
@@ -13,7 +13,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "npm run predeploy && gh-pages -d dist -r https://github.com/tiagocosmai/tiagocosmai.github.io.git"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
@@ -36,6 +36,7 @@
     "@types/react-vertical-timeline-component": "^3.3.6",
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.20",
+    "cross-env": "^7.0.3",
     "gh-pages": "^6.3.0",
     "jsdom": "^26.0.0",
     "postcss": "^8.4.49",
