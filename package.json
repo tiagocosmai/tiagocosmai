@@ -13,7 +13,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "predeploy": "npm run build",
-    "deploy": "npm run predeploy && gh-pages -d dist -r https://github.com/tiagocosmai/tiagocosmai.github.io.git"
+    "deploy": "npm run predeploy && gh-pages -d dist -r https://github.com/tiagocosmai/tiagocosmai.git"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
