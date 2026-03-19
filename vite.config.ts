@@ -2,10 +2,11 @@
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vitest/config";
 
-// Site na raiz: https://tiagocosmai.github.io (repo deve chamar-se tiagocosmai.github.io)
+// base "/" = site em https://tiagocosmai.github.io (repo tiagocosmai.github.io)
+// base "/tiagocosmai/" = site em https://tiagocosmai.github.io/tiagocosmai/ (repo tiagocosmai)
 export default defineConfig({
   plugins: [react()],
-  base: "/",
+  base: process.env.GH_PAGES === "true" ? "/tiagocosmai/" : "/",
   test: {
     environment: "jsdom",
     globals: true,

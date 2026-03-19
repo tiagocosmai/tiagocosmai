@@ -8,11 +8,12 @@
     "dev": "vite",
     "dev:all": "vite",
     "build": "tsc --noEmit && vite build",
+    "build:gh": "cross-env GH_PAGES=true npm run build",
     "preview": "vite preview",
     "sync:courses": "node scripts/sync-courses-from-txt.mjs",
     "test": "vitest run",
     "test:watch": "vitest",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build:gh",
     "deploy": "npm run predeploy && gh-pages -d dist -r https://github.com/tiagocosmai/tiagocosmai.git"
   },
   "dependencies": {
