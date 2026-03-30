@@ -123,8 +123,11 @@ Frontend architecture using **React + Next.js + microfrontends**.
 
 You can find my certifications and credentials here:
 
-🔗  
-https://www.credly.com/users/tiago-cosmai/badges
+🔗 **Credly** — badges and professional credentials:  
+[https://www.credly.com/users/tiago-cosmai/badges](https://www.credly.com/users/tiago-cosmai/badges)
+
+🔗 **HackerRank** — verified skill certifications (e.g. SQL):  
+[https://www.hackerrank.com/profile/tiagocosmai](https://www.hackerrank.com/profile/tiagocosmai)
 
 ---
 
